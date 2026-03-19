@@ -45,15 +45,15 @@
       font-weight: bold;
     }
 
-    .counter {
+    .counter-box {
       margin-top: 20px;
-      background: #3c7820;
+    }
+
+    .counter {
       color: #25580e;
       display: inline-block;
-      padding: 10px 15px;
       border-radius: 50px;
       font-weight: bold;
-      font-size: 1.2rem;
     }
 
 
@@ -89,25 +89,16 @@
       हाम्राे उत्पादनमा देखाउनु भएको विश्वासकाे लागी धन्यवाद । हजुरने छिटै ल्याब टेस्ट रिपोर्ट हेर्न पाउनुहुनेछ । ढिला भएकाेमा क्षमा चाहन्छाै 🙏
     </div>
 
-    <div class="counter" id="viewCounter">
-      0 जनाले यो ल्याब रिपोर्ट हेर्न प्रयास गरेका छन्
-    </div>
-
     <footer>
       © Sadabahar Foods
     </footer>
 
 
 
-<script>
-fetch('https://api.countapi.xyz/hit/sadabaharfoods/lab-report')
-  .then(res => res.json())
-  .then(res => {
-    document.getElementById('viewCounter').innerText =
-      res.value + " पटक हेरियो";
-  });
-</script>
-
+<!-- <div class="counter-box">
+<script type="text/javascript" src="https://counter.websiteout.com/js/7/3/100/0"></script></div>
+<div class="counter">पटक हेरियाे
+</div> -->
 
     <div class="social" style="margin-top:130px;">
       <a href="https://www.facebook.com/wow.sadabaharfoods" target="_blank" style="margin:0 10px;"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook"></a>
