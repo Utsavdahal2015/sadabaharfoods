@@ -1,93 +1,122 @@
 <!DOCTYPE html>
 <html lang="ne">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sadabahar Foods</title>
-
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sadabahar Foods - Lab Report</title>
+  <style>
     body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        background-color: #fffbe6;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #3c7820;
+      color: white;
+      text-align: center;
     }
 
     .container {
-        padding: 40px 20px;
+      padding: 40px 20px;
     }
 
-    .notice {
-        font-size: 20px;
-        color: #d32f2f;
-        font-weight: bold;
-        margin-bottom: 20px;
+    .logo {
+      max-width: 150px;
+      margin-bottom: 30px;
     }
 
-    .sub-text {
-        font-size: 16px;
-        color: #444;
-        margin-bottom: 30px;
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
     }
 
-    .brand {
-        font-size: 36px;
-        font-weight: bold;
-        color: #2e7d32;
-        margin: 20px 0;
+.message {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      max-width: 600px;
+      /* 50px top, 'auto' left/right centers it, 0px bottom */
+      margin: 50px auto 0 auto; 
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 12px;
+      /* Ensures the text inside is also centered */
+      text-align: center; 
     }
 
-    .manufactured {
-        font-size: 14px;
-        color: #555;
+    .highlight {
+      color: #ffd54f;
+      font-weight: bold;
     }
 
-    .contact a {
-        display: block;
-        margin: 8px 0;
-        text-decoration: none;
-        color: #1565c0;
-        font-weight: bold;
+    .counter {
+      margin-top: 20px;
+      background: #3c7820;
+      color: #25580e;
+      display: inline-block;
+      padding: 10px 15px;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1.2rem;
     }
 
-    .contact a:hover {
-        text-decoration: underline;
+
+    .social {
+      position: fixed;
+      bottom: 40px;
+      left: 0;
+      width: 100%;
     }
-</style>
+    
+    
+    footer {
+      position: fixed;
+      bottom: 10px;
+      left: 0;
+      width: 100%;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+        
+  </style>
 </head>
-
 <body>
 
-<div class="container">
+  <div class="container">
 
-    <!-- Nepali Notice -->
-    <div class="notice">
-        हाम्रो उत्पादनको प्रयोगशाला परीक्षण भइरहेको छ।
+    <img src="Logo_Sadabahar Foods.png" alt="Sadabahar Foods" class="logo">
+
+    <h1>याे साइट बन्ने क्रममा छ ।</h1>
+
+    <div class="message">
+      हाम्राे उत्पादनमा देखाउनु भएको विश्वासकाे लागी धन्यवाद । हजुरने छिटै ल्याब टेस्ट रिपोर्ट हेर्न पाउनुहुनेछ । ढिला भएकाेमा क्षमा चाहन्छाै 🙏
     </div>
 
-    <div class="sub-text">
-        कृपया केही समय पर्खनुहोस्। परीक्षण परिणाम छिट्टै अपडेट गरिनेछ।
+    <div class="counter" id="viewCounter">
+      0 जनाले यो ल्याब रिपोर्ट हेर्न प्रयास गरेका छन्
     </div>
 
-    <!-- Brand -->
-    <div class="brand">Sadabahar Foods</div>
+    <footer>
+      © Sadabahar Foods
+    </footer>
 
-    <!-- Manufactured Info -->
-    <div class="manufactured">
-        Manufactured by:<br>
-        Evergreen Multipurpose Pvt. Ltd.
+
+
+  <script>
+    // Fake counter increasing
+    let count = localStorage.getItem('views') || 120;
+    count++;
+    localStorage.setItem('views', count);
+
+    document.getElementById('viewCounter').innerText = 
+      count + " पटक हेरियाे";
+  </script>
+
+
+    <div class="social" style="margin-top:130px;">
+      <a href="https://www.facebook.com/wow.sadabaharfoods" target="_blank" style="margin:0 10px;"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook"></a>
+      <a href="https://www.instagram.com/wow.sadabaharfoods" target="_blank" style="margin:0 10px;"><img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" alt="Instagram"></a>
+      <a href="https://www.tiktok.com/wow.sadabaharfoods" target="_blank" style="margin:0 10px;"><img src="https://cdn-icons-png.flaticon.com/24/3046/3046121.png" alt="TikTok"></a>
+      <a href="https://www.youtube.com/wow.sadabaharfoods" target="_blank" style="margin:0 10px;"><img src="https://cdn-icons-png.flaticon.com/24/1384/1384060.png" alt="YouTube"></a>
     </div>
 
-    <!-- Contact Links -->
-    <div class="contact">
-        <a href="tel:9824035182">📞 Call: 9824035182</a>
-        <a href="https://wa.me/9824035182" target="_blank">💬 WhatsApp</a>
-        <a href="https://www.instagram.com/sadabahar.foods" target="_blank">📷 Instagram</a>
-        <a href="mailto:yourmail@example.com">✉️ Email Us</a>
-    </div>
-
-</div>
-
+      </div>
 </body>
 </html>
